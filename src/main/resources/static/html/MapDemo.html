@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MyApp</title>
+    <!-- 网页样式 -->
+    <link href="../css/CuxMapDemo.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.css" />
+    <!-- 网页脚本 -->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=3.0&ak=XvcUi5z3HjlqIZ2EVK9gI6v45AxwQyAM">
+    </script>
+</head>
+
+<body>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item mui-active" href="#main"> <span class="mui-icon mui-icon-home"></span> <span class="mui-tab-label">主页</span>
+        </a>
+        <a class="mui-tab-item" href="#mapcontent"> <span class="mui-icon mui-icon-email"> </span> <span class="mui-tab-label">地图</span>
+        </a>
+    </nav>
+
+    <div class="mui-content">
+        <!-- 首页 -->
+        <div id="main" class="mui-control-content mui-active">
+            <div class="mui-card">
+                <!--页眉，放置标题-->
+                <div class="mui-card-content mui-text-center">
+                    <img src="../image/backgroud.png" style="height:35%;width:35%;">
+                </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn" id="up_btn">我要共享</button>
+                </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary" id="down_btn">取消共享</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- 地图页 -->
+        <div id="mapcontent" class="mui-control-content">
+            <div class="mui-content">
+                <div id="map"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<!-- 业务js -->
+<script type="text/javascript" src="../js/CuxMapDemo.js"></script>
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+</script>
+
+</html>
