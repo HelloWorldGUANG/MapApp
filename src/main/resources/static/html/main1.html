@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MyApp</title>
+    <!-- 网页样式 -->
+    <link href="../css/CuxMain.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.css" />
+</head>
+
+<body>
+    <div class="mui-content">
+        <!-- 1.首页 -->
+        <div id="main" class="mui-control-content mui-active">
+            <div class="mui-card">
+                <!-- 1-1.页眉 -->
+                <div class="mui-card-header mui-card-media">
+                    <img src="../image/logo.jpg" />
+                    <div class="mui-media-body">
+                        By JICG
+                        <p>🚌🚌🚌dududu~</p>
+                    </div>
+                </div>
+                <!-- 1-2.内容 -->
+                <div class="mui-card-content  mui-text-center">
+                    <div class="mui-content">
+                        <div id="map" style="width:100%;height: 100%">
+                            <iframe name="myiframe" id="myrame-record-query"
+                                src="map" frameborder="0"
+                                align="middle" width="100%" height="100%" scrolling="no"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1-3.页脚 -->
+                <div class="mui-card-footer">
+                    <!-- 蓝色开关关闭状态 -->
+                    <div class="mui-switch mui-switch-blue" id="share_switch">
+                        <div class="mui-switch-handle"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<!-- 网页脚本 -->
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/CuxMain.js"></script>
+
+</html>
