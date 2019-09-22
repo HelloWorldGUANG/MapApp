@@ -11,55 +11,39 @@
 </head>
 
 <body>
-    <nav class="mui-bar mui-bar-tab">
-        <a class="mui-tab-item mui-active" href="#main"> <span class="mui-icon mui-icon-home"></span> <span
-                class="mui-tab-label">主页</span>
-        </a>
-        <a class="mui-tab-item" href="#mapcontent"> <span class="mui-icon mui-icon-map"> </span> <span
-                class="mui-tab-label">地图</span>
-        </a>
-    </nav>
     <div class="mui-content">
         <!-- 1.首页 -->
         <div id="main" class="mui-control-content mui-active">
-            <div class="mui-card">
+            <div id="card">
                 <!-- 1-1.页眉 -->
                 <div class="mui-card-header mui-card-media">
                     <img src="../image/logo.jpg" />
                     <div class="mui-media-body">
-                        By JICG
-                        <p>This is a map application</p>
+                        dududu~
+                        <p>🚌🚌🚌</p>
                     </div>
                 </div>
                 <!-- 1-2.内容 -->
                 <div class="mui-card-content  mui-text-center">
-                    <img src="../image/background.png" style="height:35%;width:35%;">
-                    <br><br>
-                    <div class="mui-button-row">
-                        <button type="button" class="mui-btn" id="up_btn">我要共享</button>
+                    <div class="mui-content">
+                        <div id="map" style="width:100%;height: 100%">
+                            <iframe name="mapframe" id="mapframe" src="map" frameborder="0" align="middle"
+                                width="100%" height="100%" scrolling="no"></iframe>
+                        </div>
                     </div>
-                    <br>
-                    <div class="mui-button-row">
-                        <button type="button" class="mui-btn mui-btn-primary" id="down_btn">取消共享</button>
-                    </div>
-                    <br>
-                    <div class="mui-button-row">
-                        <button type="button" class="mui-btn mui-btn-primary" id="query_btn">查看共享</button>
-                    </div>
-                    <br><br>
                 </div>
                 <!-- 1-3.页脚 -->
-                <div class="mui-card-footer">🚌🚌🚌dududu~</div>
+                <div class="mui-card-footer">
+                    <div>
+                        <p style="margin: 0px;">提供我的位置</p>
+                    </div>
+                    <!-- 蓝色开关关闭状态 -->
+                    <div class="mui-switch mui-switch-blue" id="share_switch" style="position: relative;">
+                        <div class="mui-switch-handle"></div>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <!-- 2.地图页 -->
-        <div id="mapcontent" class="mui-control-content">
-            <div class="mui-content">
-                <div id="map" style="width:100%;height: 100%"> </div>
-            </div>
-        </div>
-
     </div>
 </body>
 <!-- 网页脚本 -->

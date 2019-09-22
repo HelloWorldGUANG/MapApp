@@ -21,6 +21,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 			<version>2.0.1.RELEASE</version>
 		</dependency>
 		<dependency>
@@ -40,12 +41,13 @@
 			<version>${jstl.version}</version>
 		</dependency>
 
-		<!---->
+		<!--
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<version>${tomcat.version}</version>
 		</dependency>
+		-->
 		
 		<!--热部署-->
 		<dependency>

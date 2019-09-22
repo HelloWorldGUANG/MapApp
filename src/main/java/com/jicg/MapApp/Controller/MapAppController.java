@@ -12,12 +12,6 @@ public class MapAppController {
 		return "main";
 	}
 
-	// 主页1
-	@RequestMapping("/main1")
-	public String MapPage1() {
-		return "main1";
-	}
-
 	// 地图页
 	@RequestMapping("/map")
 	public String map() {
