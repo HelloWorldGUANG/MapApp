@@ -3,7 +3,6 @@ package com.jicg.MapApp.Entyties;
 import java.io.Serializable;
 
 public class HelloWebsocketEntity implements Serializable {
-
 	private static final long serialVersionUID = -6556793741331167103L;
 	private String name;
 	private String value;
@@ -23,5 +22,4 @@ public class HelloWebsocketEntity implements Serializable {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
 }

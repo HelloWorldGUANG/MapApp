@@ -57,7 +57,6 @@ public class HelloWebsocketContorller {
 
 		}
 		return "success!";
-
 	}
 
 }
