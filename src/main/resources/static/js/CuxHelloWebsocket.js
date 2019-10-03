@@ -9,34 +9,44 @@ $("#container").css("margin-top", length);
 
 
 // ------------------定时刷新页面---------------------------
-$(document).ready(function() {
+$(document).ready(function () {
     var socket;
-    if (typeof(WebSocket) == "undefined") {
+    if (typeof (WebSocket) == "undefined") {
         console.log("您的浏览器不支持WebSocket");
     } else {
         //实现化WebSocket对象，指定要连接的服务器地址与端口(连接到Server中对应的@ServerEndpoint)
-        socket = new WebSocket("ws://localhost:8080/websocket");
+        socket = new WebSocket("ws://localhost:8080/Mapwebsocket");
         //打开事件
-        socket.onopen = function() {
-        	
+        socket.onopen = function () {
+
         };
         //获得消息事件
-        socket.onmessage = function(msg) {
-        	var data = eval('(' + msg.data + ')');
-        	var TotalConnect = data.TotalConnect;
-        	var Message = data.Message;
-            $("#total-connect").text(TotalConnect);
-            $("#message").text(Message);
+        socket.onmessage = function (msg) {
+        	var res = msg.data;
+        	if (res.indexOf("POINT-") != -1) {
+        		res = res.replace("POINT-", "");
+                var obj = JSON.parse(res);
+                var lng = obj.lng;
+                var lat = obj.lat;
+                console.log(lng + "," + lat);
+            }
+            else {
+                var data = eval('(' + msg.data + ')');
+                var TotalConnect = data.TotalConnect;
+                var Message = data.Message;
+                $("#total-connect").text(TotalConnect);
+                $("#message").text(Message);
+            }
         };
         //关闭事件
-        socket.onclose = function() {
-        	
+        socket.onclose = function () {
+
         };
         //发生了错误事件
-        socket.onerror = function() {
+        socket.onerror = function () {
             alert("Socket发生了错误");
         }
-        $(window).unload(function() {
+        $(window).unload(function () {
             socket.close();
         });
     }
